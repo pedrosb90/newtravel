@@ -42,6 +42,20 @@ const Header = () => {
         >
           {/* Logo */}
           <div className="flex items-center gap-x-4 order-1 w-[25%] box-border pl-6 lmd:pl-14 lg:pl-24 2xl:pl-16">
+            <a
+              href="https://partner.globalrescue.com/pedrostrauch/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/globalrescue.png"
+                alt="global rescue partner"
+                width={120}
+                height={40}
+                className="object-contain"
+                priority
+              />
+            </a>
             <Link href="/">
               <Image
                 src="/logopedrotravel.png"
