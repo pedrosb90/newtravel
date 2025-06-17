@@ -13,7 +13,12 @@ const Hero = () => {
         {/* <a href="https://github.com/" className="w-5 py-2">
           <FaGithub color="#f1f5f9" size={22} />
         </a> */}
-        <a href="https://www.instagram.com/pedrstrauch" className="w-5 py-2">
+        <a
+          href="https://www.instagram.com/pedrstrauch"
+          className="w-5 py-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaInstagram color="#f1f5f9" size={22} />
         </a>
         {/* <a href="https://twitter.com/" className="w-5 py-2">
