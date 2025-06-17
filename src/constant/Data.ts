@@ -2,25 +2,25 @@ import { title } from "process";
 
 export const Navdata = [
   {
-    title: "Home",
+    title: "Viajes",
     reference: "home",
   },
   {
-    title: "About",
+    title: "Contenido",
     reference: "about",
   },
-  {
-    title: "Destinations",
-    reference: "destinations",
-  },
-  {
-    title: "Review",
-    reference: "review",
-  },
-  {
-    title: "Contact",
-    reference: "contact",
-  },
+  // {
+  //   title: "Destinations",
+  //   reference: "destinations",
+  // },
+  // {
+  //   title: "Review",
+  //   reference: "review",
+  // },
+  // {
+  //   title: "Contact",
+  //   reference: "contact",
+  // },
 ];
 
 export const FilterData = [

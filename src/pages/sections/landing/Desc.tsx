@@ -10,7 +10,7 @@ const Desc = () => {
         <div className="basis-1/3 flex items-center justify-center px-4 gap-x-3 xl:basis-1/4">
           <MdLocationOn size={30} />
           <h2 className="xs:text-xl sm:text-2xl lg:text-[1.7rem] font-bold">
-            Sri Lanka
+            Viajes{" "}
           </h2>
         </div>
         {/* advertisment */}
@@ -23,19 +23,31 @@ const Desc = () => {
           </div>
           <div className="hidden sm:flex sm:w-full sm:items-center">
             <div className=" basis-1/3 flex flex-col justify-center px-2 lg:px-6 xl:px-9">
-              <h2 className="text-xl lg:text-[1.375rem] font-bold">01</h2>
+              <h2 className="text-xl lg:text-[1.375rem] font-bold">Ski</h2>
               <p className="hidden xs:block text-xs lg:text-[0.8125rem] lg:leading-[1.15rem]">
-                Lorem ipsum dolor sit{" "}
-                <span className="hidden lg:inline">
+                Viajes de Ski y Snowboard para Pros y Principiantes{" "}
+                {/* <span className="hidden lg:inline">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
                   <span className="hidden 2xl:inline">
                     Lorem ipsum dolor sit amet consectetur adipisicing.
                   </span>
-                </span>
+                </span> */}
               </p>
             </div>
             <div className=" basis-1/3 flex flex-col justify-center px-2 lg:px-6 xl:px-9">
-              <h2 className="text-xl lg:text-[1.375rem] font-bold">02</h2>
+              <h2 className="text-xl lg:text-[1.375rem] font-bold">Andes</h2>
+              <p className="hidden xs:block text-xs lg:text-[0.8125rem] lg:leading-[1.15rem]">
+                Cabalgatas y Tekking al Valle de las Lágrimas, Mendoza{" "}
+                {/* <span className="hidden lg:inline">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
+                  <span className="hidden 2xl:inline">
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                  </span>
+                </span> */}
+              </p>
+            </div>
+            {/* <div className=" basis-1/3 flex flex-col justify-center px-2 lg:px-6 xl:px-9">
+              <h2 className="text-xl lg:text-[1.375rem] font-bold">Andes</h2>
               <p className="hidden xs:block text-xs lg:text-[0.8125rem] lg:leading-[1.15rem]">
                 Lorem ipsum dolor sit{" "}
                 <span className="hidden lg:inline">
@@ -45,19 +57,7 @@ const Desc = () => {
                   </span>
                 </span>
               </p>
-            </div>
-            <div className=" basis-1/3 flex flex-col justify-center px-2 lg:px-6 xl:px-9">
-              <h2 className="text-xl lg:text-[1.375rem] font-bold">03</h2>
-              <p className="hidden xs:block text-xs lg:text-[0.8125rem] lg:leading-[1.15rem]">
-                Lorem ipsum dolor sit{" "}
-                <span className="hidden lg:inline">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-                  <span className="hidden 2xl:inline">
-                    Lorem ipsum dolor sit amet consectetur adipisicing.
-                  </span>
-                </span>
-              </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

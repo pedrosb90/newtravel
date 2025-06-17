@@ -1,163 +1,120 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import Image from "next/image";
-import Link from "next/link";
-import Darkheader from "@/components/Darkheader";
-import FormValues from "@/constant/Type";
-import TextInput from "@/components/TextInput";
-import Checkbox from "@/components/Checkbox";
-import PickAuth from "@/components/PickAuth";
+"use client";
 
-export default function Register() {
+import { useForm } from "react-hook-form";
+
+type ContactFormValues = {
+  nombre: string;
+  email: string;
+  mensaje: string;
+};
+
+export default function Contacto() {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormValues>({
+  } = useForm<ContactFormValues>({
     defaultValues: {
-      firstName: "",
-      lastName: "",
+      nombre: "",
       email: "",
-      password: "",
-      remainder: false,
+      mensaje: "",
     },
   });
 
-  register("firstName", { required: "This is required" });
-
-  register("lastName", { required: "This is required" });
-
-  register("email", {
-    required: "Enter your email",
-    pattern: {
-      value: /^\S+@\S+$/i,
-      message: "Invalid email",
-    },
-  });
-
-  register("password", {
-    required: "Enter your password",
-    minLength: {
-      value: 8,
-      message: "minimum 8 characters",
-    },
-  });
-
-  console.log("errors", errors);
+  const onSubmit = (data: ContactFormValues) => {
+    console.log("Formulario enviado:", data);
+    reset();
+  };
 
   return (
-    <>
-      <main className="min-h-screen p-20 flex justify-center items-center">
-        <Darkheader />
-        <section className="flex flex-wrap shadow-lg px-20 py-14 lg:p-0">
-          {/* form */}
-          <div className="flex items-center mx-auto mb-4 lg:px-20 lg:py-14">
-            <form
-              onSubmit={handleSubmit((data: FormValues) => {
-                console.log(data);
-                reset();
-              })}
-              className="flex flex-col"
+    <main className="min-h-screen p-8 flex justify-center items-center bg-gray-100">
+      <section className="w-full max-w-2xl bg-white p-10 rounded-lg shadow-lg">
+        <h1 className="text-3xl font-bold text-slate-800 mb-6">
+          ¿Trabajamos juntos?
+        </h1>
+        <p className="text-slate-600 mb-8">
+          Si tenés un proyecto turístico, una marca en crecimiento o simplemente
+          querés mejorar tu presencia online, escribime. Estoy para ayudarte a
+          llevar tu propuesta al próximo nivel.
+        </p>
+
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <div>
+            <label
+              htmlFor="nombre"
+              className="block text-sm font-medium text-slate-700"
             >
-              <h1 className="text-4xl font-bold text-slate-700 ">
-                Create an account
-              </h1>
-              <p className="text-slate-500 my-2">
-                Hello there! Please enter your details below to register
-              </p>
-              <div className="flex justify-center my-4">
-                <Link
-                  href=""
-                  className="px-4 py-2 rounded-lg shadow-lg flex gap-x-2"
-                >
-                  <Image
-                    src="/google.png"
-                    alt="img"
-                    width={24}
-                    height={24}
-                  ></Image>
-                  <p>Continue with Google</p>
-                </Link>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="border-t border-slate-300 grow"></div>
-                <p className="text-base text-slate-400 self-start">or</p>
-                <div className="border-t border-slate-300 grow"></div>
-              </div>
-              <div className="flex gap-x-2">
-                <div>
-                  <TextInput
-                    label="First name"
-                    name="firstName"
-                    type="text"
-                    error={errors.firstName?.message}
-                    register={register}
-                  />
-                </div>
-                <div>
-                  <TextInput
-                    label="Last name"
-                    name="lastName"
-                    type="text"
-                    error={errors.lastName?.message}
-                    register={register}
-                  />
-                </div>
-              </div>
-              <TextInput
-                label="Email"
-                name="email"
-                type="email"
-                error={errors.email?.message}
-                register={register}
-              />
-              <TextInput
-                label="Password"
-                name="password"
-                type="password"
-                error={errors.password?.message}
-                register={register}
-              />
-              <div className="mb-6 mt-1">
-                <Checkbox
-                  label="remainder"
-                  type="checkbox"
-                  name="remainder"
-                  register={register}
-                  info="Yes, I understand and agree to the given"
-                />
-                <Link
-                  href=""
-                  className="text-emerald-900 text-opacity-75 text-sm underline"
-                >
-                  Terms of Service
-                </Link>
-              </div>
-              <input
-                type="submit"
-                value="Create account"
-                className="rounded-lg cursor-pointer px-4 py-3 bg-emerald-900 text-slate-100 mb-2"
-              />
-              <PickAuth
-                question="Already have an account?&nbsp;"
-                pick="Log in"
-                link="/Login"
-              />
-            </form>
-          </div>
-          {/* image */}
-          <div className=" max-w-[345px] lg:max-w-[480px] xl:flex mx-auto hidden">
-            <Image
-              src="/55.jpg"
-              alt="img"
-              width={600}
-              height={20}
-              className=""
+              Nombre
+            </label>
+            <input
+              id="nombre"
+              type="text"
+              {...register("nombre", { required: "Este campo es obligatorio" })}
+              className="mt-1 block w-full px-4 py-2 border rounded-md border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
+            {errors.nombre && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.nombre.message}
+              </p>
+            )}
           </div>
-        </section>
-      </main>
-    </>
+
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-slate-700"
+            >
+              Correo electrónico
+            </label>
+            <input
+              id="email"
+              type="email"
+              {...register("email", {
+                required: "Este campo es obligatorio",
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Correo inválido",
+                },
+              })}
+              className="mt-1 block w-full px-4 py-2 border rounded-md border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.email.message}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label
+              htmlFor="mensaje"
+              className="block text-sm font-medium text-slate-700"
+            >
+              ¿En qué te puedo ayudar?
+            </label>
+            <textarea
+              id="mensaje"
+              {...register("mensaje", {
+                required: "Este campo es obligatorio",
+              })}
+              className="mt-1 block w-full px-4 py-2 border rounded-md border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 h-32 resize-none"
+            />
+            {errors.mensaje && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.mensaje.message}
+              </p>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition"
+          >
+            Enviar mensaje
+          </button>
+        </form>
+      </section>
+    </main>
   );
 }

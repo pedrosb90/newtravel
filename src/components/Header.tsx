@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 import Link from "next/link";
-import { FaPlaneDeparture } from "react-icons/fa";
+import Image from "next/image";
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
@@ -43,24 +43,28 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-x-4 order-1 w-[25%] box-border pl-6 lmd:pl-14 lg:pl-24 2xl:pl-16">
             <Link href="/">
-              <FaPlaneDeparture
-                size={25}
-                color={`${dark ? "#374151" : "#f3f4f6"}`}
+              <Image
+                src="/logopedrotravel.png"
+                alt="Pedro Travel Logo"
+                width={120}
+                height={40}
+                className="object-contain"
+                priority
               />
             </Link>
             <Link
               href="/"
-              className={`hidden lg:inline  text-lg sm:text-xl lg:text-[1.375rem] font-bold tracking-wide ${
-                dark ? "text-gray-700" : "text-gray-100"
+              className={`hidden lg:inline  text-l sm:text-l lg:text-[1rem] font-bold tracking-wide ${
+                dark ? "text-gray-100" : "text-gray-100"
               }`}
             >
-              Travel
+              The Pedro Travel Club{" "}
             </Link>
           </div>
           {/* navigation */}
           <Nav />
           {/* login & register */}
-          <div className="order-2 lg:order-3 lg:w-[25%] box-border flex justify-center items-center lg:pr-24 2xl:pr-16 gap-x-2 lg:justify-end">
+          {/* <div className="order-2 lg:order-3 lg:w-[25%] box-border flex justify-center items-center lg:pr-24 2xl:pr-16 gap-x-2 lg:justify-end">
             <Link
               href="/Login"
               className={`uppercase hidden xs:inline xs:text-sm sm:text-base tracking-widest ${
@@ -82,7 +86,7 @@ const Header = () => {
             >
               register
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

@@ -18,30 +18,33 @@ const Second = () => {
           <div className="flex flex-col gap-y-10 lmd:w-[45%] px-6 box-border">
             <div className="flex flex-col gap-y-6">
               <h2 className="text-3xl font-bold text-gray-700 md:text-4xl lg:text-5xl lmd:max-w-lg">
-                The most populer travel agency in the world
+                Impulsá tu proyecto turístico con estrategia, imagen y presencia
+                digital{" "}
               </h2>
               <p className="lg:text-lg">
-                Welcome to the Official Travel website. Build with the finest
-                services for our customers and become the biggest travel agency
-                in 2023. Find and discover the beauty of the world with us by
-                your side
+                Como consultor especializado en turismo, combino estrategia,
+                contenido y desarrollo digital para ayudarte a construir una
+                marca auténtica y visible. Trabajo junto a emprendedores,
+                agencias y destinos para potenciar su presencia online, mejorar
+                su comunicación y atraer al viajero ideal. Desde el diseño de
+                sitios web hasta la creación de contenido visual.
               </p>
             </div>
             <div className="flex gap-x-4">
               <Link
-                href="/gallery/WorldGallery"
+                href="/Register"
                 className="px-4 py-[0.6rem] lmd:py-3 lmd:px-6 bg-gray-700 text-gray-100 hover:bg-gray-800 transition-all duration-300"
               >
-                Discover more places
+                Me interesa{" "}
               </Link>
-              <Link
+              {/* <Link
                 href=""
                 className="px-4 py-[0.6rem] lmd:py-3 lmd:px-6 border-[1px] border-gray-400 hover:border-gray-800 border-opacity-40 hover:border-opacity-100 transition-all duration-200"
               >
                 View our packages
-              </Link>
+              </Link> */}
             </div>
-            <div className="bg-gray-200 p-4">
+            {/* <div className="bg-gray-200 p-4">
               <p>
                 Interested in Travel to be your travel companion on your special
                 moment? Get in touch with our team at{" "}
@@ -49,18 +52,18 @@ const Second = () => {
                   tripteam@travel.com
                 </a>
               </p>
-            </div>
+            </div> */}
           </div>
           {/* image */}
-          <div className="w-full lmd:w-[45%] px-6 box-border">
+          {/* <div className="w-full lmd:w-[45%] px-6 box-border">
             <div className="bg-[url('/pg2-2.jpg')] h-[20rem] w-full bg-cover bg-center shadow-2xl lmd:h-3/4 lg:h-[90%] relative">
               <div className="absolute -bottom-4 -right-4 shadow-2xl border-8 border-gray-200">
                 <Image src="/pg2-4.jpg" alt="" width={200} height={50} />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="flex items-center justify-start lmd:px-10 xl:px-16 box-border">
+        {/* <div className="flex items-center justify-start lmd:px-10 xl:px-16 box-border">
           <div className="md:w-[80%] flex flex-col sm:flex-row gap-y-6 justify-between px-6 box-border">
             <div className="flex items-start gap-x-3">
               <MdOutlineTravelExplore size={30} />
@@ -90,7 +93,7 @@ const Second = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
