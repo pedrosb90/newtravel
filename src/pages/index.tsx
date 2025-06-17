@@ -28,7 +28,7 @@ export default function Home() {
         {/* section 4 */}
         {/* <Testi /> */}
         {/* <Reviewpage /> */}
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );

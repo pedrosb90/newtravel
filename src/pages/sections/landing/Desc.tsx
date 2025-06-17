@@ -16,10 +16,7 @@ const Desc = () => {
         {/* advertisment */}
         <div className="basis-2/3 flex xl:basis-3/4">
           <div className="flex items-center justify-center text-sm px-2 sm:hidden">
-            <h3>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
-              commodi!
-            </h3>
+            <h3>Organizo viajes de aventura en montaña y mar.</h3>
           </div>
           <div className="hidden sm:flex sm:w-full sm:items-center">
             <div className=" basis-1/3 flex flex-col justify-center px-2 lg:px-6 xl:px-9">
